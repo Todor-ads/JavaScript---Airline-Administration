@@ -1,0 +1,19 @@
+<nav>
+    <div class="left-container">
+        <ul>{{#if isAuth}}
+            <li><a href="">Flights</a></li>
+            <li><a href="#/Myflights">My Flights</a></li>
+            {{else}}
+            <li><a href="#/login">Login</a></li>
+            <li><a href="#/register">Register</a></li>
+        {{/if}}
+    </ul>
+    </div>
+    {{#if isAuth}}
+    <div class="right-container">
+        <span>Welcome, {{name}} |</span>
+        <a href="#/logout" class="log-out">Logout</a>
+        <a href=""><img src="static/img/cart.png" alt="" class="cart"></a>
+    </div>
+    {{/if}}
+</nav>
